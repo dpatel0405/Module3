@@ -4,11 +4,14 @@ app = Flask(__name__)
 
 @app.route('/')
 def hello_world():  # put application's code here
-    return 'Hello World from Deven Patel! Testing output'
+    return 'Hello World from Deven Patel! I am adding my first code change'
 
 @app.route('/hello')
 def hello():
     return render_template('helloWorld.html')
+
+def about():
+    return render_template('about.html')
 
 if __name__ == '__main__':
     app.run(port=5001, debug=True)
